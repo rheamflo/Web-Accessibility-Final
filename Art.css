@@ -1,0 +1,36 @@
+html[data-theme="dark"] .desc {
+    color: #ffffff !important;
+}
+
+/* Art page specific styling - collage layout */
+.art-collage-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
+    gap: 0.9375rem;
+    padding: 1.25rem;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+
+.art-collage-gallery .image {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    flex: none;
+}
+
+.art-collage-gallery .image img {
+    width: 100%;
+    height: auto;
+    max-height: 25rem;
+    object-fit: cover;
+    display: block;
+}
+
+.art-collage-gallery .image:hover img {
+    height: auto !important;
+    width: 100% !important;
+    max-height: 25rem !important;
+    object-fit: cover !important;
+}
