@@ -1,0 +1,30 @@
+/* Currently Heading */
+html[data-theme="dark"] .currently {
+    h2{
+        color:#e7eaf0;
+    }
+    h3{
+    color: #e7eaf0;
+    }
+    em{
+    color: #e7eaf0;
+    }
+    em:hover{
+        color:#bccef4;
+    }
+}
+
+h1 {
+    line-height: 2;
+    color: #0c2231;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+ }
+h2{
+    font-weight: 150;
+}
+
+audio {
+    display: block;
+    margin-right: 6.25rem;
+ }
