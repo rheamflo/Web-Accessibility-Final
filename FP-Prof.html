@@ -1,250 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="Bio.js"></script>  
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode" />
-    <link rel="stylesheet" href="Prof.css">
+    <script src="Bio.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="FinalStyle.css">
+    <link rel="stylesheet" href="Prof.css">
     <title>Rhea Flores Final Project</title>
 </head>
+
 <body>
     <header class="top-header">
-            <div class="hamburger-menu">
-            <span class="menu__btn" tabindex="0" role="button" aria-label="Toggle navigation menu" aria-expanded="false">
-              <span></span>
+        <div class="hamburger-menu">
+            <span class="menu__btn" tabindex="0" role="button" aria-label="Toggle navigation menu"
+                aria-expanded="false">
+                <span></span>
             </span>
             <ul class="menu__box" role="navigation" aria-label="Main navigation">
-                    <li><a class="menu__item" href="FP-Bio.html" aria-label="Navigate to Biography page">Biography</a></li>
-                    <li><a class="menu__item" href="FP-Prof.html" aria-label="Navigate to Professional Work page" aria-current="page">Professional Work</a></li>
-                    <li><a class="menu__item" href="FP-Position.html" aria-label="Navigate to Position Statement page">Position</a></li>
-                    <li><a class="menu__item" href="FP-Art.html" aria-label="Navigate to Art page">Art</a></li>
+                <li><a class="menu__item" href="FP-Bio.html" aria-label="Navigate to Biography page">Biography</a></li>
+                <li><a class="menu__item" href="FP-Prof.html" aria-label="Navigate to Professional Work page"
+                        aria-current="page">Professional Work</a></li>
+                <li><a class="menu__item" href="FP-Position.html"
+                        aria-label="Navigate to Position Statement page">Position</a></li>
+                <li><a class="menu__item" href="FP-Art.html" aria-label="Navigate to Art page">Art</a></li>
             </ul>
-          </div>
-          <div class="centered-name"><a href="FP-Bio.html" class="name-link" aria-label="Go to Rhea Flores Biography">Rhea Flores</a></div>
-          <div>
-              <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
-              <span class="material-symbols-outlined moon-icon" aria-hidden="true">dark_mode</span>
-          </button>
-          </div>
+        </div>
+        <div class="centered-name"><a href="FP-Bio.html" class="name-link" aria-label="Go to Rhea Flores Biography">Rhea
+                Flores</a></div>
+        <div>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                <span class="material-symbols-outlined moon-icon" aria-hidden="true">dark_mode</span>
+            </button>
+        </div>
     </header>
     <script>
-        
-    // Function to handle dropdown menu clicks
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get all elements with data-name attribute
-        const navItems = document.querySelectorAll('[data-name]');
-        
-        // Add click event listeners to each navigation item
-        navItems.forEach(function(item) {
-            // Add keyboard support
-            item.addEventListener('click', toggleSection);
-            item.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleSection.call(this);
-                }
-            });
-            
-            function toggleSection() {
-                const sectionName = this.getAttribute('data-name');
-                const targetSection = document.getElementById(sectionName);
-                
-                if (targetSection) {
-                    const isHidden = targetSection.style.display === 'none' || targetSection.style.display === '';
-                    // Toggle the display of the section
-                    if (isHidden) {
-                        targetSection.style.display = 'block';
-                        this.setAttribute('aria-expanded', 'true');
-                    } else {
-                        targetSection.style.display = 'none';
-                        this.setAttribute('aria-expanded', 'false');
+
+        // Function to handle dropdown menu clicks
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get all elements with data-name attribute
+            const navItems = document.querySelectorAll('[data-name]');
+
+            // Add click event listeners to each navigation item
+            navItems.forEach(function (item) {
+                // Add keyboard support
+                item.addEventListener('click', toggleSection);
+                item.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggleSection.call(this);
+                    }
+                });
+
+                function toggleSection() {
+                    const sectionName = this.getAttribute('data-name');
+                    const targetSection = document.getElementById(sectionName);
+
+                    if (targetSection) {
+                        const isHidden = targetSection.style.display === 'none' || targetSection.style.display === '';
+                        // Toggle the display of the section
+                        if (isHidden) {
+                            targetSection.style.display = 'block';
+                            this.setAttribute('aria-expanded', 'true');
+                        } else {
+                            targetSection.style.display = 'none';
+                            this.setAttribute('aria-expanded', 'false');
+                        }
                     }
                 }
-            }
+            });
         });
-    });
-        </script>
-    <hr/>
+    </script>
     <main>
-    <ul id="navigation">
-        <li>
-            <div class="nav-link">
-		        <h2 id="education-heading" data-name="education" role="button" aria-expanded="false" aria-controls="education" tabindex="0">Education</h2>
-		        <div id="education" class="dropdown-content" style="display: none;" role="region" aria-labelledby="education-heading">
-	<hr/>
-                <h3>Rutgers University - New Brunswick</h3>
-                <p>Class of 2026</p>
-                <ul>
-                    <li><p>Bachelor of Arts in Information Technology and Informatics</p></li>
-                    <li><p>Double Minor in Business Administration and Economics</p></li>
-                </ul>
 
-	            </div>
-    <hr/>
-            </div>
-        </li>
-	    <li>
-	        <div class="nav-link">
-		        <h2 id="work-heading" data-name="work" role="button" aria-expanded="false" aria-controls="work" tabindex="0">Work Experience</h2>
-		        <div id="work" class="dropdown-content" style="display: none;" role="region" aria-labelledby="work-heading">
-	<hr/>
-		        <h3>Physical Therapy Intern at AMP Physical Therapy</h3>
-		        <p>( September 2022 - December 2022 )</p>
-		        <p>Throughout my time at AMP Physical Therapy, I was able to gain experience in the field of physical therapy.
-		                I was able to assist a physical therapist with patients, and I was able to gain experience in the use of various physical therapy 
-		                techniques and equipment. At this time, I was pursuing a career in Exercise Science, and although I learned a lot throughout this opprtunity, 
-		                I ultimately realized that my passion lied in the field on Information Technology.
-                </p>
 
-		        <h3>Information Technology Specialist at the Rutgers Office of Information Technology</h3>
-		        <p>( April 2024 - Present )</p>
-		        <p>For the past year and a half, I have been working part-time as an IT Specialist at the Rutgers OIT Help Desk. My responsiblities include assisting students, faculty, and staff with their technology needs
-		                whether through phone calls, emails, or in-person visits. Additionally, I also assist with the maintenance of the Data Center outside of the regular Help Desk hours.
-		        </p>
-	            </div>
-    <hr/>
-            </div>
-        </li>
-        <li>
-	        <div class="nav-link">
-		        <h2 id="extracurriculars-heading" data-name="extracurriculars" role="button" aria-expanded="false" aria-controls="extracurriculars" tabindex="0">Leadership & Extracurriculars</h2>
-		        <div id="extracurriculars" class="dropdown-content" style="display: none;" role="region" aria-labelledby="extracurriculars-heading">
-    <hr/>
-                <h3><a href="https://rutgerseta.wixsite.com/kappas" target="_blank" alt="Kappa Phi Lambda Sorority, Inc.">Kappa Phi Lambda Sorority, Inc.</a></h3>
-                <p>Since Spring of 2023, I have been a sister of the Kappa Phi Lambda Sorority at Rutgers University. Since then, I've held multiple positions
-                that have advanced my skills and have given me experiences in professional situations:
-                </p>
-                
-    <span style="display: inline-block; width: 50px; border-bottom: 1px solid #babbbe;;"></span>
-                <h4>Recruitment Chair</h4>
-                <!-- <li><p>Served as recruitment chair for two consecutive semesters</p></li>  -->
-                <!-- <li><p>Coordinate the entirety of "Rush Week", which represents the first two weeks of school when recruitment events are held</p></li> -->
-                <!-- <li><p>Maintaining a budget of $700, collaborating with various campus organizations and caterers</p></li> -->
-            
-                <h4>Philanthropy Chair</h4>
-                <!-- <li><p>Organized and lead an annual large-scale philanthropy event.</p></li>
-                <li><p>Collaborated with local businesses to secure sponsorships and donations, along with various school organizations.</p></li>
-                <li><p>Developed and utilized marketing strategies through graphics and social media that enhanced advertisement and gained visibility and attendance.</p></li> -->
-                <!-- <li><p>Raised over $1,500 for a local nonprofit, <a href="https://www.sierrahouse.org/"><em>Sierra House</em></a>, whose mission is to assist individuals who are struggling with housing, education, and food.</p></li> -->
+        <h1>Professional Work</h1>
 
-                <h4>Historian</h4>
-                <!-- <li><p>Maintained detailed records of events and achievements.</p></li>
-                <li><p>Managed and organized archives, photos and videos, and important documents to maintain easy accessibility for events.</p></li>
-                <li><p>Collaborating with Program Educators, Recruitment Chairs, and Alumni by following strict deadlines and explaining concepts related to recruitment in a concise and professional manner.</p></li> -->
+        <hr>
 
-                <h4>Secretary</h4>
-                <!-- <li><p>Maintained sorority records through the use of Google Workspace and Microsoft Excel.</p></li>
-                <li><p>Utilized leadership skills through collaborating within the Executive Board to ensure organization 
-                    within the entire chapter.</p></li> -->
+        <div class="prof-grid">
+            <div id="navigation">
+                <div class="nav-link">
+                    <h2 id="education-heading">
+                        <button type="button" class="accordion-trigger" data-name="education" aria-expanded="false"
+                            aria-controls="education">
+                            <span>Education</span>
+                            <span class="chevron material-symbols-outlined">expand_more</span>
+                        </button>
+                    </h2>
+                    <div id="education" class="dropdown-content" style="display: none;" role="region"
+                        aria-labelledby="education-heading">
+                        <hr />
+                        <h3>Rutgers University - New Brunswick</h3>
+                        <p>Class of 2026</p>
+                        <ul>
+                            <li>
+                                <p>Bachelor of Arts in Information Technology and Informatics</p>
+                            </li>
+                            <li>
+                                <p>Double Minor in Business Administration and Economics</p>
+                            </li>
+                        </ul>
 
-                <h4>Social Chair</h4>
-                <!-- <li><p>Collaborated with various campus organizations to plan co-hosted events.</p></li>
-                <li><p>Maintained a budget of $300 while organizing event logistics and operations.</p></li> -->
-        
-        <span style="display: inline-block; width: 50px; border-bottom: 1px solid #babbbe;;"></span>
-                <h3><a href="https://rutgers.campuslabs.com/engage/organization/blueprint" target="_blank" alt="Rutgers Blueprint Website">Rutgers Blueprint</a></h3>
-                
-                <h4>Fellow:</h4>
-                <!-- <li><p>Collaborated with my assigned group to develop a student support application called "ScarletSpace"</li></p> -->
-                <p>Defined a product roadmap and actively engaged in weekly meetings while providing valuable insights and feedback to ensure alignment of development phases
-                    with strategic goals and market needs for AI integration.</p>
-                <!-- <li><p>Conducted user research by gather 65+ survey responses and running canary tests with a student focus group to improve feature prioritization and development</p></li> -->
-                
-                <!-- <h4>Vice President</h4> -->
-                <!-- <li><p>Assisted in the development of the application and acceptance process of the Product Development Program.</p></li>
+                    </div>
+                    <hr />
+                </div>
+                <div class="nav-link">
+                    <h2 id="work-heading">
+                        <button type="button" class="accordion-trigger" data-name="work" aria-expanded="false"
+                            aria-controls="work">
+                            <span>Work Experience</span>
+                            <span class="chevron material-symbols-outlined">expand_more</span>
+                        </button>
+                    </h2>
+                    <div id="work" class="dropdown-content" style="display: none;" role="region"
+                        aria-labelledby="work-heading">
+                        <hr />
+                        <h3>Physical Therapy Intern at AMP Physical Therapy</h3>
+                        <p>( September 2022 - December 2022 )</p>
+                        <p>Throughout my time at AMP Physical Therapy, I was able to gain experience in the field of
+                            physical therapy.
+                            I was able to assist a physical therapist with patients, and I was able to gain experience
+                            in the use of various physical therapy
+                            techniques and equipment. At this time, I was pursuing a career in Exercise Science, and
+                            although I learned a lot throughout this opprtunity,
+                            I ultimately realized that my passion lied in the field on Information Technology.
+                        </p>
+
+                        <h3>Information Technology Specialist at the Rutgers Office of Information Technology</h3>
+                        <p>( April 2024 - Present )</p>
+                        <p>For the past year and a half, I have been working part-time as an IT Specialist at the
+                            Rutgers OIT Help Desk. My responsiblities include assisting students, faculty, and staff
+                            with their technology needs
+                            whether through phone calls, emails, or in-person visits. Additionally, I also assist with
+                            the maintenance of the Data Center outside of the regular Help Desk hours.
+                        </p>
+                    </div>
+                    <hr />
+                </div>
+                <div class="nav-link">
+                    <h2 id="extracurriculars-heading">
+                        <button type="button" class="accordion-trigger" data-name="extracurriculars"
+                            aria-expanded="false" aria-controls="extracurriculars">
+                            <span>Leadership & Extracurriculars</span>
+                            <span class="chevron material-symbols-outlined">expand_more</span>
+                        </button>
+                    </h2>
+                    <div id="extracurriculars" class="dropdown-content" style="display: none;" role="region"
+                        aria-labelledby="extracurriculars-heading">
+                        <hr />
+                        <h3><a href="https://rutgerseta.wixsite.com/kappas" target="_blank"
+                                alt="Kappa Phi Lambda Sorority, Inc.">Kappa Phi Lambda Sorority, Inc.</a></h3>
+                        <p>Since Spring of 2023, I have been a sister of the Kappa Phi Lambda Sorority at Rutgers
+                            University. Since then, I've held multiple positions
+                            that have advanced my skills and have given me experiences in professional situations:
+                        </p>
+
+                        <span style="display: inline-block; width: 50px; border-bottom: 1px solid #babbbe;;"></span>
+                        <h4>Recruitment Chair</h4>
+                        <ul>
+                            <li>
+                                <p>Served as recruitment chair for two consecutive semesters</p>
+                            </li>
+                            <li>
+                                <p>Coordinate the entirety of "Rush Week", which represents the first two weeks of
+                                    school
+                                    when recruitment events are held</p>
+                            </li>
+                            <li>
+                                <p>Maintaining a budget of $700, collaborating with various campus organizations and
+                                    caterers</p>
+                            </li>
+                        </ul>
+
+                        <h4>Philanthropy Chair<h4>
+                                <ul>
+                                    <li>
+                                        <p>Organized and lead an annual large-scale philanthropy event.</p>
+                                    </li>
+                                    <li>
+                                        <p>Collaborated with local businesses to secure sponsorships and donations,
+                                            along
+                                            with
+                                            various school organizations.</p>
+                                    </li>
+                                    <li>
+                                        <p>Developed and utilized marketing strategies through graphics and social media
+                                            that
+                                            enhanced advertisement and gained visibility and attendance.</p>
+                                    </li>
+                                    <li>
+                                        <p>Raised over $1,500 for a local nonprofit,
+                                            <a href="https://www.sierrahouse.org/"><em>Sierra House</em></a>, whose
+                                            mission
+                                            is to assist individuals who are struggling with housing, education, and
+                                            food.
+                                        </p>
+                                    </li>
+                                </ul>
+
+                                <h4>Historian<h4>
+                                        <ul>
+                                            <li>
+                                                <p>Maintained detailed records of events and achievements.</p>
+                                            </li>
+                                            <li>
+                                                <p>Managed and organized archives, photos and videos, and important
+                                                    documents to maintain easy accessibility for events.</p>
+                                            </li>
+                                            <li>
+                                                <p>Collaborating with Program Educators, Recruitment Chairs, and Alumni
+                                                    by
+                                                    following strict deadlines and explaining concepts related to
+                                                    recruitment in a concise and professional manner.</p>
+                                            </li>
+                                        </ul>
+
+                                        <h4>Secretary</h4>
+                                        <ul>
+                                            <li>
+                                                <p>Maintained sorority records through the use of Google Workspace and
+                                                    Microsoft Excel.</p>
+                                            </li>
+                                            <li>
+                                                <p>Utilized leadership skills through collaborating within the Executive
+                                                    Board to ensure organization
+                                                    within the entire chapter.</p>
+                                            </li>
+                                        </ul>
+
+
+                                        <h4>Social Chair</h4>
+                                        <ul>
+                                            <li>
+                                                <p>Collaborated with various campus organizations to plan co-hosted
+                                                    events.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Maintained a budget of $300 while organizing event logistics and
+                                                    operations.</p>
+                                            </li>
+                                        </ul>
+
+                                        <span
+                                            style="display: inline-block; width: 50px; border-bottom: 1px solid #babbbe;;"></span>
+                                        <h3><a href="https://rutgers.campuslabs.com/engage/organization/blueprint"
+                                                target="_blank" alt="Rutgers Blueprint Website">Rutgers Blueprint</a>
+                                        </h3>
+
+                                        <h4>Fellow:</h4>
+                                        <!-- <li><p>Collaborated with my assigned group to develop a student support application called "ScarletSpace"</li></p> -->
+                                        <p>Defined a product roadmap and actively engaged in weekly meetings while
+                                            providing
+                                            valuable
+                                            insights and feedback to ensure alignment of development phases
+                                            with strategic goals and market needs for AI integration.</p>
+                                        <!-- <li><p>Conducted user research by gather 65+ survey responses and running canary tests with a student focus group to improve feature prioritization and development</p></li> -->
+
+                                        <!-- <h4>Vice President</h4> -->
+                                        <!-- <li><p>Assisted in the development of the application and acceptance process of the Product Development Program.</p></li>
                 <li><p>Organized the archived presentations and worksheets from previous semesters by utilizing Google Workspace.</p></li>
                 <li><p>Developed new presentations, ensuring that all content is covered and explained in a concise and professional manner to the fellows.</p></li>
                 <li><p>Engaged in weekly E-Board Meetings to update E-Board Members, as well as the Vice Presidents of the other divisions.</p></li> -->
-                
-                <h4>Vice President & Education Director:</h4>
-                <p>Led a team of fellows in developing "RU Fit", an app designed for Rutgers students to track gym capacity and receive personalized meal plans</p>
-                <!-- <li><p>Oversaw the navigation of the app's full product lifecycle, through providing guidance on user research, product strategy, and execution</p></li> -->
-                <p>Introduced useful Product Management tools such as Figma, Tableau, and Trello</p>
-                </p>
 
-                <span style="display: inline-block; width: 50px; border-bottom: 1px solid #babbbe;; "></span>
-                <h3><a href="https://www.rudm.org/" target="_blank" alt="Rutgers University Dance Marathon Website">3. Event Logistics Captain of the Rutgers University Dance Marathon</a></h3>
-                <p>Manage the logistical planning and execution of large-scale RUDM events.</p>
-                <!-- <li><p>Developed a Critical Path Network to coordinate load-in, setup, and breakdown across multiple campus venues.</p></li> -->
-                <p>Collaborate with cross-functional teams and vendors to streamline operations, improve accessibility, and ensure smooth participant 
-                    experiences aligned with the Embrace Kids Foundation mission.</p>
-                </p>
+                                        <h4>Vice President & Education Director:</h4>
+                                        <p>Led a team of fellows in developing "RU Fit", an app designed for Rutgers
+                                            students to
+                                            track
+                                            gym capacity and receive personalized meal plans</p>
+                                        <!-- <li><p>Oversaw the navigation of the app's full product lifecycle, through providing guidance on user research, product strategy, and execution</p></li> -->
+                                        <p>Introduced useful Product Management tools such as Figma, Tableau, and Trello
+                                        </p>
+                                        </p>
+
+                                        <span
+                                            style="display: inline-block; width: 50px; border-bottom: 1px solid #babbbe;; "></span>
+                                        <h3><a href="https://www.rudm.org/" target="_blank"
+                                                alt="Rutgers University Dance Marathon Website">3. Event Logistics
+                                                Captain
+                                                of the
+                                                Rutgers University Dance Marathon</a></h3>
+                                        <p>Manage the logistical planning and execution of large-scale RUDM events.</p>
+                                        <!-- <li><p>Developed a Critical Path Network to coordinate load-in, setup, and breakdown across multiple campus venues.</p></li> -->
+                                        <p>Collaborate with cross-functional teams and vendors to streamline operations,
+                                            improve
+                                            accessibility, and ensure smooth participant
+                                            experiences aligned with the Embrace Kids Foundation mission.</p>
+                    </div>
+                    <hr />
+                </div>
+                <div class="nav-link">
+                    <h2 id="skills-heading">
+                        <button type="button" class="accordion-trigger" data-name="skills" aria-expanded="false"
+                            aria-controls="skills">
+                            <span>Technical Skills</span>
+                            <span class="chevron material-symbols-outlined">expand_more</span>
+                        </button>
+                    </h2>
+                    <div id="skills" class="dropdown-content" style="display: none;" role="region"
+                        aria-labelledby="skills-heading">
+                        <hr />
+                        <h3>Data Analysis</h3>
+                        <ul>
+                            <li>
+                                Microsoft Excel
+                                <ul>
+                                    <li>Pivot Tables</li>
+                                    <li>Charts & Dashboards</li>
+                                </ul>
+                            </li>
+                            <li>Tableau</li>
+                            <li>Google Workspace</li>
+                            <li>Data Cleaning</li>
+                        </ul>
+
+                        <h3>Product Management</h3>
+                        <ul>
+                            <li>Feature Prioritization</li>
+                            <li>Requirements Gathering</li>
+                            <li>Roadmapping</li>
+                        </ul>
+
+                        <h3>User Research</h3>
+                        <ul>
+                            <li>User Interviews</li>
+                            <li>Usability Testing</li>
+                            <li>Survey Design</li>
+                        </ul>
+
+                        <h3>Mobile Application Design</h3>
+                        <ul>
+                            <li>Wireframing</li>
+                            <li>Prototyping</li>
+                            <li>User Flows</li>
+                        </ul>
+
+                        <h3>Event Operations</h3>
+                        <ul>
+                            <li>Logistics Planning</li>
+                            <li>Budget Tracking</li>
+                            <li>Vendor Coordination</li>
+                        </ul>
+
+                    </div>
+                    <hr />
+                </div>
+            </div>
+            <div class="side-image-container">
+            </div>
         </div>
-        </ul>
-    </p>
-        </p>
-	
-    </div>
-    <hr/>
-        </li>
-	    <li>
-	        <div class="nav-link">
-		        <h2 id="skills-heading" data-name="skills" role="button" aria-expanded="false" aria-controls="skills" tabindex="0">Technical Skills</h2>
-		        <div id="skills" class="dropdown-content" style="display: none;" role="region" aria-labelledby="skills-heading">
-    <hr/>
-            <h3>Data Analysis</h3>
-              <ul>
-                <li>
-                  Microsoft Excel
-                  <ul>
-                    <li>Pivot Tables</li>
-                    <li>Charts & Dashboards</li>
-                  </ul>
-                </li>
-                <li>Tableau</li>
-                <li>Google Workspace</li>
-                <li>Data Cleaning</li>
-              </ul>
-          
-              <h3>Product Management</h3>
-              <ul>
-                <li>Feature Prioritization</li>
-                <li>Requirements Gathering</li>
-                <li>Roadmapping</li>
-              </ul>
-          
-              <h3>User Research</h3>
-              <ul>
-                <li>User Interviews</li>
-                <li>Usability Testing</li>
-                <li>Survey Design</li>
-              </ul>
-          
-              <h3>Mobile Application Design</h3>
-              <ul>
-                <li>Wireframing</li>
-                <li>Prototyping</li>
-                <li>User Flows</li>
-              </ul>
-          
-              <h3>Event Operations</h3>
-              <ul>
-                <li>Logistics Planning</li>
-                <li>Budget Tracking</li>
-                <li>Vendor Coordination</li>
-              </ul>
-
-	</div>
-    <hr/>
-    </div>
-    </li>
-    </li>
-    </ul>
     </main>
+    <hr />
     <footer>
         <div class="footer">
             <img src="..\images\RheaFlores - Headshot.jpg" alt="Rhea Flores Professional Headshot" class="headshot">
             <div class="contact">
                 <h2>Contact Information</h2>
-                <p>Email Me: <a href="mailto:rhea.flores@example.com" aria-label="Email Rhea Flores at rf573@scarletmail.rutgers.edu">rf573@scarletmail.rutgers.edu</a></p>
-                <p><a href="https://www.linkedin.com/in/rhea-flores-a6603531b" target="_blank">LinkedIn</a>
-                    <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:671841bd-68c1-413a-8c1f-7ce0e84af038" target="_blank">Resume</a>
-                </p>              
+                <p>
+                    <span>
+                        Email Me:
+                    </span>
+                    <span>
+                        <a href="mailto:rhea.flores@example.com">
+                            rf573@scarletmail.rutgers.edu</a>
+                    </span>
+                </p>
+                <p>
+                    <span> <a href="https://www.linkedin.com/in/rhea-flores-a6603531b"
+                            target="_blank">LinkedIn</a></span>
+                    <span>&nbsp;•&nbsp;</span>
+                    <span> <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:671841bd-68c1-413a-8c1f-7ce0e84af038"
+                            target="_blank">Resume</a>
+                    </span>
+                </p>
                 <p>Rutgers University - New Brunswick</p>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
